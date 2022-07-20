@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(0, 0%, 89%);
+}
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+.card {
+  width: 500px;
+  height: 380px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.image {
+  background: url('images/image-product-desktop.jpg') center center no-repeat;
+  background-size: cover;
+}
+.info {
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+  padding: 20px;
+}
+.info::before {
+  content: 'perfume';
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: hsl(228, 12%, 48%);
+}
+.info h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 25px;
+}
+.info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.6;
+}
+.price {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.price span:first-child {
+  color: hsl(158, 36%, 37%);
+  font-size: 30px;
+  font-family: 'Fraunces', serif;
+  margin-right: 20px;
+}
+.price span:last-child {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 12px;
+}
+svg {
+  margin-right: 10px;
+}
+.link {
+  display: flex;
+  align-items: center;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px 55px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: poitner;
+  transition: 0.3s;
+}
+.link:hover {
+  background-color: hsl(158, 36%, 30%);
+}
+.attribution {
+  margin-top: 20px;
+}
+
+@media (max-width: 776px) {
+  .container {
+    width: 380px;
+    margin: 0 auto;
+  }
+  .card {
+    width: 375px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 375px;
+    grid-template-rows: repeat(2, minmax(350px, 1fr));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .image {
+    background: url('images/image-product-mobile.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .info {
+    height: 350px;
+  }
+}
